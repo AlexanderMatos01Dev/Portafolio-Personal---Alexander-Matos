@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('../Assets/BackGround.webp') no-repeat center center fixed;
+    background: url('../Assets/Images/BackGround.webp') no-repeat center center fixed;
+
     background-size: cover;
     font-size: 1.45rem;
 }
@@ -15,7 +16,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.823);
+    background-color: rgba(255, 255, 255, 0.823);
     z-index: -10;
 }
 
@@ -26,76 +27,232 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0.625rem 0;
+    padding: 0.625rem 12.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor de los enlaces de navegación */
-.nav-links {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* Estilos del logo */
+/* Importa la fuente desde la carpeta local usando una ruta relativa */
+@font-face {
+    font-family: 'BrushScriptOpti-Regular';
+    src: url('../Assets/Fonts/BrushScriptOpti-Regular.woff2') format('woff2');
+
 }
 
-/* Estilos de los enlaces de navegación */
+/* Estilos del logo */
+.logo {
+    font-size: 2.5rem;
+    font-family: 'BrushScriptOpti-Regular', sans-serif;
+}
+
+/* Estilos de los enlaces */
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
 .nav-links li {
-    margin: 0 1rem;
+    display: inline;
 }
 
 .nav-links a {
     text-decoration: none;
     color: black;
     font-size: 1.56rem;
+    position: relative;
+    transition: opacity 0.3s ease;
     opacity: 0.7;
-    transition: opacity 0.3s;
 }
 
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #52bada;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.2s ease;
+}
+
+/* Combinación de estados activo y hover */
+.nav-links a.active,
 .nav-links a:hover,
-.nav-links a:active {
+.nav-links a.active::before,
+.nav-links a:hover::before {
     opacity: 1;
+    transform: scaleX(1);
+}
+
+.nav-links a.active::before {
+    transition-duration: 0.1s;
 }
 
 /* Clases comunes para botones */
 .btn {
     display: inline-block;
     padding: 14px 29px;
+    text-decoration: none;
     border-radius: 29px;
     font-size: 1.625rem;
     margin-top: 29px;
     color: white;
     cursor: pointer;
-    text-decoration: none;
 }
 
 .btn-black {
-    background: black;
+    background-color: #333;
 }
 
-
-/* Estilos responsivos */
-@media (max-width: 430px) {
-
-    .nav-links a {
-        font-size: 1.2rem; /* Disminuye el tamaño de fuente */
-    }
+.btn-black:hover {
+    background-color: #555;
 }
 
-@media (max-width: 350px) {
-    .nav-links {
-        flex-direction: column; /* Cambia la dirección a columna */
-        align-items: center; /* Centra los enlaces */
-    }
-    .nav-links a {
-        font-size: 1rem; /* Tamaño de fuente aún más pequeño */
-    }
+.btn-blue {
+    background-color: #52bada;
+}
+.btn-nav {
+    padding: 10px 20px; /* Reduce el tamaño del padding para hacer el botón más pequeño */
+    margin: auto 0; /* Alinea verticalmente el botón con los enlaces */
+}
 
-    .nav-links li {
-        margin: 0.75rem 0; /* Ajusta el espacio entre los enlaces */
-    }
+/* Estilos de la sección principal */
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Estilos del contenido principal */
+.content-home {
+    max-width: 45%;
+    position: absolute;
+    top: 30%;
+    left: 11.5%;
+}
+
+.content-home p {
+    margin: 0;
+    font-size: 1.875rem;
+}
+
+.content-home h1 {
+    font-size: 4.6875rem;
+    margin: 15px 0;
+}
+
+/* Estilos de las filas */
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1%;
+}
+
+/* Estilos de la sección de tecnologías */
+.content-home-tec {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 51.3%;
+    left: 77.1%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos de los círculos */
+.circle {
+    width: 125px;
+    height: 125px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}
+
+/* Estilos del nombre destacado */
+#name {
+    color: #52b9d9;
+    position: relative;
+    left: 0;
+}
+
+/* Estilos del párrafo de descripción */
+.description {
+    font-size: 1.625rem;
+    margin: 29px 0;
+}
+
+/* Estilos de la sección "About" */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.content-about {
+
+    position: absolute;
+    top: 107%;
+    left: 50%;
+}
+
+.content-about h2 {
+    position: relative;
+}
+
+.content-about h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #52bada;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.image-container {
+
+    max-width: 70%;
+
+}
+
+.left-image {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+    transform: translate(-40%, -100%);
+}
+.tech-logo {
+    max-width: 70%;
+    max-height: 70%;
+    margin: auto;
+    display: block;
+}
+
+.contact-about{
+    max-width: 38.3%;
+
 }
