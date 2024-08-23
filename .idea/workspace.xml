@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20649d03-970f-4cd2-89d8-8eea50fc5998" name="Changes" comment="nombre">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/BackGround.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/css.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/git.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/html5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/imagen izquierda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/javascript.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/left-image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/tailwindcss.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Styles/Styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlexanderMatos01Dev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlexanderMatos01Dev/Portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;bcc4a0b7-6a30-4050-8b96-d1e10fc1cf2c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2kc6s2gQZdQxMEjlo3eQN45BJ0f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/almc0/OneDrive/Escritorio/Portfolio-old&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\almc0\OneDrive\Escritorio\Portfolio" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19072.23" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20649d03-970f-4cd2-89d8-8eea50fc5998" name="Changes" comment="" />
+      <created>1723570720706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723570720706</updated>
+      <workItem from="1723570721762" duration="1716000" />
+      <workItem from="1723576121383" duration="413000" />
+      <workItem from="1723577741052" duration="216000" />
+      <workItem from="1723580670177" duration="8977000" />
+      <workItem from="1723644707484" duration="19577000" />
+      <workItem from="1723665077006" duration="513000" />
+      <workItem from="1723667367212" duration="1580000" />
+      <workItem from="1723670496278" duration="705000" />
+      <workItem from="1723862584294" duration="1071000" />
+      <workItem from="1723909546608" duration="914000" />
+      <workItem from="1723960897515" duration="1812000" />
+      <workItem from="1724169852772" duration="814000" />
+      <workItem from="1724170704701" duration="29980000" />
+      <workItem from="1724342780592" duration="17566000" />
+      <workItem from="1724386335436" duration="1789000" />
+      <workItem from="1724428273263" duration="236000" />
+      <workItem from="1724428552595" duration="4000" />
+      <workItem from="1724428602829" duration="719000" />
+      <workItem from="1724430749966" duration="4272000" />
+      <workItem from="1724443704068" duration="156000" />
+      <workItem from="1724443882393" duration="48000" />
+      <workItem from="1724444134883" duration="2392000" />
+      <workItem from="1724446999449" duration="79000" />
+      <workItem from="1724447110342" duration="628000" />
+    </task>
+    <task id="LOCAL-00001" summary="....">
+      <option name="closed" value="true" />
+      <created>1723590447475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723590447475</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cambio de directorio del html">
+      <option name="closed" value="true" />
+      <created>1723591903919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723591903919</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cambio de directorio del html">
+      <option name="closed" value="true" />
+      <created>1723592520227</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723592520227</updated>
+    </task>
+    <task id="LOCAL-00004" summary="cambio de directorio del html">
+      <option name="closed" value="true" />
+      <created>1723593307370</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723593307370</updated>
+    </task>
+    <task id="LOCAL-00005" summary="vercel.json">
+      <option name="closed" value="true" />
+      <created>1723593744289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723593744289</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mover todo a public">
+      <option name="closed" value="true" />
+      <created>1723594257144</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723594257144</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mover todo a public">
+      <option name="closed" value="true" />
+      <created>1723594275170</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723594275170</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="...." />
+    <MESSAGE value="cambio de directorio del html" />
+    <MESSAGE value="vercel.json" />
+    <MESSAGE value="mover todo a public" />
+    <MESSAGE value="nombre" />
+    <option name="LAST_COMMIT_MESSAGE" value="nombre" />
+  </component>
+</project>
