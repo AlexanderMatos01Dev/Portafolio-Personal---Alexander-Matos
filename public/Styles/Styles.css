@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background: url('../Assets/Images/BackGround.webp') no-repeat center center fixed;
-
     background-size: cover;
     font-size: 1.45rem;
 }
@@ -16,7 +15,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.823);
+    background-color: rgba(255, 255, 255, 0.65);
     z-index: -10;
 }
 
@@ -37,20 +36,17 @@ body {
 }
 
 /* Estilos del logo */
-/* Importa la fuente desde la carpeta local usando una ruta relativa */
 @font-face {
     font-family: 'BrushScriptOpti-Regular';
     src: url('../Assets/Fonts/BrushScriptOpti-Regular.woff2') format('woff2');
-
 }
 
-/* Estilos del logo */
 .logo {
     font-size: 2.5rem;
     font-family: 'BrushScriptOpti-Regular', sans-serif;
 }
 
-/* Estilos de los enlaces */
+/* Estilos de los enlaces de navegación */
 .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -85,7 +81,6 @@ body {
     transition: transform 0.3s ease, width 0.2s ease;
 }
 
-/* Combinación de estados activo y hover */
 .nav-links a.active,
 .nav-links a:hover,
 .nav-links a.active::before,
@@ -98,43 +93,168 @@ body {
     transition-duration: 0.1s;
 }
 
-/* Clases comunes para botones */
-.btn {
-    display: inline-block;
-    padding: 14px 29px;
-    text-decoration: none;
-    border-radius: 29px;
-    font-size: 1.625rem;
-    margin-top: 29px;
-    color: white;
-    cursor: pointer;
-}
-
-.btn-black {
-    background-color: #333;
-}
-
-.btn-black:hover {
-    background-color: #555;
-}
-
-.btn-blue {
-    background-color: #52bada;
-}
-.btn-nav {
-    padding: 10px 20px; /* Reduce el tamaño del padding para hacer el botón más pequeño */
-    margin: auto 0; /* Alinea verticalmente el botón con los enlaces */
-}
-
-/* Estilos de la sección principal */
-.home-section {
-    display: flex;
+/* Estilos del botón de menú */
+.btn-menu {
+    display: none;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
 }
 
+.icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #171717;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-bar + .icon-bar {
+    margin-top: 5px;
+}
+
+/* Estilos del menú off-screen */
+#nav-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#nav-container.open {
+    pointer-events: auto;
+}
+
+#nav-container .bg {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+}
+
+#nav-container:focus-within .bg {
+    visibility: visible;
+    opacity: .6;
+}
+
+#nav-container * {
+    visibility: visible;
+}
+
+#nav-content {
+    margin-top: 70px;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+#nav-container.open #nav-content {
+    transform: translateX(0%);
+}
+
+#nav-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-content ul li {
+    margin: 15px 0;
+}
+
+#nav-content ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.56rem;
+    position: relative;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+#nav-content ul li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #52bada;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.2s ease;
+}
+
+#nav-content ul li a.active,
+#nav-content ul li a:hover,
+#nav-content ul li a.active::before,
+#nav-content ul li a:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+#nav-content ul li a.active::before {
+    transition-duration: 0.1s;
+}
+
+/* Superposición de fondo */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.65);
+    z-index: -10;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.625rem 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del logo */
+@font-face {
+    font-family: 'BrushScriptOpti-Regular';
+    src: url('../Assets/Fonts/BrushScriptOpti-Regular.woff2') format('woff2');
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-family: 'BrushScriptOpti-Regular', sans-serif;
+}
 /* Estilos del contenido principal */
 .content-home {
     max-width: 45%;
@@ -193,58 +313,7 @@ body {
     left: 0;
 }
 
-/* Estilos del párrafo de descripción */
-.description {
-    font-size: 1.625rem;
-    margin: 29px 0;
-}
 
-/* Estilos de la sección "About" */
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-}
-
-.content-about {
-
-    position: absolute;
-    top: 107%;
-    left: 50%;
-}
-
-.content-about h2 {
-    position: relative;
-}
-
-.content-about h2::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #52bada;
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    border-radius: 2px;
-}
-
-.image-container {
-
-    max-width: 70%;
-
-}
-
-.left-image {
-    max-width: 70%;
-    height: auto;
-    position: absolute;
-    transform: translate(-40%, -100%);
-}
 .tech-logo {
     max-width: 70%;
     max-height: 70%;
@@ -252,7 +321,363 @@ body {
     display: block;
 }
 
-.contact-about{
-    max-width: 38.3%;
-
+/* Estilos de los enlaces de navegación */
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.56rem;
+    position: relative;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #52bada;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.2s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.nav-links a.active::before,
+.nav-links a:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.nav-links a.active::before {
+    transition-duration: 0.1s;
+}
+
+/* Estilos del botón de menú */
+.btn-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+/* Clases comunes para botones */
+.btn {
+    display: inline-block;
+    padding: 14px 29px;
+    text-decoration: none;
+    border-radius: 29px;
+    font-size: 1.625rem;
+    margin-top: 29px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-black {
+    background-color: #333;
+}
+
+.btn-black:hover {
+    background-color: #555;
+}
+
+.btn-blue {
+    background-color: #52bada;
+}
+.btn-nav {
+    padding: 10px 20px; /* Reduce el tamaño del padding para hacer el botón más pequeño */
+    margin: auto 0; /* Alinea verticalmente el botón con los enlaces */
+}
+
+.icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #171717;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-bar + .icon-bar {
+    margin-top: 5px;
+}
+
+/* Estilos del menú off-screen */
+#nav-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#nav-container .bg {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+}
+
+#nav-container:focus-within .bg {
+    visibility: visible;
+    opacity: .6;
+}
+
+#nav-container * {
+    visibility: visible;
+}
+
+#nav-content {
+    margin-top: 70px;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+#nav-container.open #nav-content {
+    transform: translateX(0%);
+}
+
+#nav-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Asegura que los elementos no estén apilados */
+    flex-direction: column; /* Alinea verticalmente los elementos */
+}
+
+#nav-content ul li {
+    margin: 15px 0;
+}
+
+#nav-content ul li a {
+    text-decoration: none; /* Quitar subrayado */
+    color: black; /* Asegura que el color coincida con el de la barra de navegación */
+    font-size: 1.56rem;
+    position: relative;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+#nav-content ul li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #52bada;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.2s ease;
+}
+
+#nav-content ul li a.active,
+#nav-content ul li a:hover,
+#nav-content ul li a.active::before,
+#nav-content ul li a:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+#nav-content ul li a.active::before {
+    transition-duration: 0.1s;
+}
+
+/* Media Queries */
+
+/* Celulares Grandes (321px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .logo {
+        font-size: 1.7rem;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbar {
+        padding: 1.0rem 0rem;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .btn-menu {
+        display: flex;
+        left: 90%;
+        top: 50%;
+        transform: translate(-50%);
+    }
+
+    .content-home {
+        display: none;
+    }
+
+    .content-home-tec {
+        display: none;
+    }
+}
+
+
+/* Tabletas Pequeñas (481px - 768px) */
+    /* Ejemplo: iPad Mini, Samsung Galaxy Tab */
+    @media (min-width: 481px) and (max-width: 768px) {
+        .navbar {
+            padding: 0.625rem 2rem;
+        }
+
+        .content-home {
+            max-width: 70%;
+            left: 15%;
+        }
+
+        .content-home-tec {
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* Tabletas Grandes (769px - 1024px) */
+    /* Ejemplo: iPad Air, Samsung Galaxy Tab 10.1 */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .navbar {
+            padding: 0.625rem 3rem;
+        }
+
+        .content-home {
+            max-width: 60%;
+            left: 20%;
+        }
+
+        .content-home-tec {
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* Laptops Pequeñas (1025px - 1366px) */
+    /* Ejemplo: Laptops pequeñas y netbooks */
+    @media (min-width: 1025px) and (max-width: 1366px) {
+        .navbar {
+            padding: 0.625rem 4rem;
+        }
+
+        .content-home {
+            max-width: 50%;
+            left: 25%;
+        }
+
+        .content-home-tec {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* Laptops y Monitores de Tamaño Estándar (1367px - 1920px) */
+    /* Ejemplo: Monitores de tamaño estándar y laptops de gama media a alta */
+    @media (min-width: 1367px) and (max-width: 1920px) {
+        /* Estilos globales */
+
+
+
+
+
+    }
+
+    /* Pantallas Pequeñas (1921px - 2560px) */
+    /* Ejemplo: Monitores QHD */
+    @media (min-width: 1921px) and (max-width: 2560px) {
+        .navbar {
+            padding: 0.625rem 6rem;
+        }
+
+        .content-home {
+            max-width: 40%;
+            left: 35%;
+        }
+
+        .content-home-tec {
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* Pantallas Grandes (2561px - 3840px) */
+    /* Ejemplo: Monitores 4K UHD */
+    @media (min-width: 2561px) and (max-width: 3840px) {
+        .navbar {
+            padding: 0.625rem 7rem;
+        }
+
+        .content-home {
+            max-width: 35%;
+            left: 40%;
+        }
+
+        .content-home-tec {
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* Pantallas Extra Grandes (3841px en adelante) */
+    /* Ejemplo: Monitores 5K y 8K */
+    @media (min-width: 3841px) {
+        .navbar {
+            padding: 0.625rem 8rem;
+        }
+
+        .content-home {
+            max-width: 30%;
+            left: 45%;
+        }
+
+        .content-home-tec {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }

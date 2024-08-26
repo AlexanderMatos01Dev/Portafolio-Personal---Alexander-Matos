@@ -1,53 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
-    const btns = document.querySelectorAll('.btn'); // Selecciona todos los botones con la clase .btn
+    const menu = document.getElementById('menu');
+    const backgroundOverlay = document.querySelector('.background-overlay');
+    const btnMenu = document.querySelector('.btn-menu');
+    const navContainer = document.getElementById('nav-container');
 
-    function highlightNav() {
-        let scrollY = window.scrollY;
+    // Resalta el enlace de navegación activo en función de la sección visible
+    const highlightNav = () => {
+        const scrollY = window.scrollY;
 
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 50;
-            const sectionId = current.getAttribute('id');
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 50;
+            const sectionId = section.getAttribute('id');
+            const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
 
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector('.nav-links a[href="#' + sectionId + '"]').classList.add('active');
-            } else {
-                document.querySelector('.nav-links a[href="#' + sectionId + '"]').classList.remove('active');
-            }
+            navLink.classList.toggle('active', scrollY > sectionTop && scrollY <= sectionTop + sectionHeight);
         });
-    }
+    };
 
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+    // Función para desplazamiento suave al hacer clic en un enlace
+    const smoothScroll = (e, targetId) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
 
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
+        window.scrollTo({ top: targetElement.offsetTop, behavior: 'smooth' });
+    };
 
-    // Aplica el desplazamiento suave a todos los botones con la clase .btn
-    btns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            // Verifica si el botón tiene un href que apunta a una sección
-            if (this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => smoothScroll(e, link.getAttribute('href').substring(1)));
     });
 
     window.addEventListener('scroll', highlightNav);
+
+    // Manejo del botón de menú
+    btnMenu.addEventListener('click', () => {
+        navContainer.classList.toggle('open');
+        backgroundOverlay.classList.toggle('visible');
+    });
+
+    // Manejo de clics en la superposición de fondo
+    backgroundOverlay.addEventListener('click', () => {
+        navContainer.classList.remove('open');
+        backgroundOverlay.classList.remove('visible');
+    });
+
 });

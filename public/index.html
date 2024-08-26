@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Matos | Web Dev</title>
     <link href="Styles/Styles.css" rel="stylesheet">
     <script defer src="Scripts/Script.js"></script>
@@ -11,21 +11,38 @@
 <!-- Navigation -->
 <nav class="navbar">
     <div class="logo">Alexander Matos</div>
-    <ul class="nav-links">
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Reviews</a></li>
+    <button class="btn-menu" aria-label="Toggle Menu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <ul class="nav-links" id="menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
     </ul>
-    <a class="btn btn-black btn-nav" href="#">Contact</a>
+    <a class="btn btn-black btn-nav" href="#contact">Contact</a>
 </nav>
+
+<!-- Menu Off-Screen -->
+<div id="nav-container">
+    <div class="bg"></div>
+    <div id="nav-content">
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+        </ul>
+    </div>
+</div>
 
 <!-- Background Overlay -->
 <div class="background-overlay"></div>
 
 <!-- Home Section -->
-<section class="home-section" id="home">
+<section id="home" class="home-section">
     <div class="content-home">
         <p>Hey There,</p>
         <h1>
@@ -33,29 +50,45 @@
             <br>
             A WEB DEVELOPER
         </h1>
-        <p class="description">I enjoy combining my web development skills with design,
-            leveraging my artistic eye and attention to detail.</p>
+        <p class="description">
+            I enjoy combining my web development skills with design,
+            leveraging my artistic eye and attention to detail.
+        </p>
         <a class="btn btn-blue" href="#about">About Me</a>
-        <a class="btn btn-black" href="#">Hire Me</a> 
+        <a class="btn btn-black" href="#contact">Hire Me</a>
     </div>
 
     <!-- Technologies Section -->
     <section class="content-home-tec">
         <div class="row">
-            <div class="circle"><img alt="HTML LOGO" class="tech-logo html-logo" src="Assets/Images/html5.svg"></div>
+            <div class="circle">
+                <img src="Assets/Images/html5.svg" alt="HTML Logo" class="tech-logo html-logo">
+            </div>
         </div>
         <div class="row">
-            <div class="circle"><img alt="Tailwind CSS LOGO" class="tech-logo" src="Assets/Images/tailwindcss.svg"></div>
-            <div class="circle"><img alt="JavaScript LOGO" class="tech-logo js-logo" src="Assets/Images/javascript.svg"></div>
+            <div class="circle">
+                <img src="Assets/Images/tailwindcss.svg" alt="Tailwind CSS Logo" class="tech-logo">
+            </div>
+            <div class="circle">
+                <img src="Assets/Images/javascript.svg" alt="JavaScript Logo" class="tech-logo js-logo">
+            </div>
         </div>
         <div class="row">
-            <div class="circle"><img alt="GitHub LOGO" class="tech-logo" src="Assets/Images/github.svg"></div>
-            <div class="circle"><img alt="Git LOGO" class="tech-logo" src="Assets/Images/git.svg"></div>
-            <div class="circle"><img alt="CSS LOGO" class="tech-logo css-logo" src="Assets/Images/css.svg"></div>
+            <div class="circle">
+                <img src="Assets/Images/github.svg" alt="GitHub Logo" class="tech-logo">
+            </div>
+            <div class="circle">
+                <img src="Assets/Images/git.svg" alt="Git Logo" class="tech-logo">
+            </div>
+            <div class="circle">
+                <img src="Assets/Images/css.svg" alt="CSS Logo" class="tech-logo css-logo">
+            </div>
         </div>
     </section>
 </section>
 
+<!-- Background Overlay -->
+<div class="background-overlay"></div>
 
 </body>
 </html>

@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="20649d03-970f-4cd2-89d8-8eea50fc5998" name="Changes" comment="Grandes cambios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Scripts/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Scripts/Script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Styles/Styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AlexanderMatos01Dev/Portfolio.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/AlexanderMatos01Dev/Portafolio-Personal-Alexander-Matos.git&quot;,
     &quot;accountId&quot;: &quot;bcc4a0b7-6a30-4050-8b96-d1e10fc1cf2c&quot;
   }
 }</component>
@@ -99,6 +102,16 @@
       <workItem from="1724444134883" duration="2392000" />
       <workItem from="1724446999449" duration="79000" />
       <workItem from="1724447110342" duration="2052000" />
+      <workItem from="1724451102161" duration="17000" />
+      <workItem from="1724451127671" duration="15169000" />
+      <workItem from="1724513637534" duration="6927000" />
+      <workItem from="1724535269717" duration="1156000" />
+      <workItem from="1724541899619" duration="2565000" />
+      <workItem from="1724547063959" duration="7167000" />
+      <workItem from="1724554722162" duration="1056000" />
+      <workItem from="1724633115332" duration="2620000" />
+      <workItem from="1724644273673" duration="5994000" />
+      <workItem from="1724684357863" duration="2248000" />
     </task>
     <task id="LOCAL-00001" summary="....">
       <option name="closed" value="true" />
