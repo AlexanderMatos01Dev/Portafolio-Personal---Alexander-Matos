@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20649d03-970f-4cd2-89d8-8eea50fc5998" name="Changes" comment="Grandes cambios">
+    <list default="true" id="20649d03-970f-4cd2-89d8-8eea50fc5998" name="Changes" comment="Cambios menores + responsive moviles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Scripts/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Scripts/Script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/Styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Styles/Styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
@@ -111,7 +110,8 @@
       <workItem from="1724554722162" duration="1056000" />
       <workItem from="1724633115332" duration="2620000" />
       <workItem from="1724644273673" duration="5994000" />
-      <workItem from="1724684357863" duration="2248000" />
+      <workItem from="1724684357863" duration="9362000" />
+      <workItem from="1724719162733" duration="7579000" />
     </task>
     <task id="LOCAL-00001" summary="....">
       <option name="closed" value="true" />
@@ -185,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724447915104</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cambios menores + responsive moviles">
+      <option name="closed" value="true" />
+      <created>1724696027495</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724696027495</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +207,7 @@
     <MESSAGE value="mover todo a public" />
     <MESSAGE value="nombre" />
     <MESSAGE value="Grandes cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grandes cambios" />
+    <MESSAGE value="Cambios menores + responsive moviles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios menores + responsive moviles" />
   </component>
 </project>

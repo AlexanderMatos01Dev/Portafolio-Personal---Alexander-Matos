@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
-    const menu = document.getElementById('menu');
     const backgroundOverlay = document.querySelector('.background-overlay');
     const btnMenu = document.querySelector('.btn-menu');
     const navContainer = document.getElementById('nav-container');
